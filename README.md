@@ -41,6 +41,11 @@
 - **Vighnaharta Technologies** (2020 — 2021)
 - **Polaris India Pvt.Ltd.** (2018 — 2020)
 
+## Education
+- Bachelor of Engineering in Electronics Engineering | University of Pune, India | 2018
+- Diploma in Industrial Electronics | Maharashtra State Board of Technical Education | 2015
+- Secondary School Certificate (SSC) | Ahmednagar, India | 2012
+
 ---
 
 ## 🚀 Projects / Highlights
