@@ -1,5 +1,5 @@
 <h1 align="center">Chintamani Sagade</h1>
-<p align="center"><b>Embedded Linux | Yocto | C/C++ | CI/CD | Industrial Automation</b></p>
+<p align="center"><b>Embedded Linux | Yocto | C/C++ | CI/CD | Industrial Automation | Robotics | IoT</b></p>
 
 <p align="center">
   <a href="https://chintamani-s.github.io/chintamani-s/">
