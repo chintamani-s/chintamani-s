@@ -1,6 +1,3 @@
-/* ==============================
-   GLOBAL
-============================== */
 * {
   margin: 0;
   padding: 0;
@@ -14,18 +11,15 @@ body {
   color: #eaf2ff;
 }
 
-/* ==============================
-   EMBEDDED / ELECTRONICS BACKGROUND
-============================== */
+/* Background */
 .bg {
   position: fixed;
   inset: 0;
   z-index: -2;
-  background: radial-gradient(circle at top, #071a2b 0%, #040814 55%, #02030a 100%);
+  background: radial-gradient(circle at top, #07233d 0%, #050b1f 55%, #02030a 100%);
   overflow: hidden;
 }
 
-/* circuit grid + nodes */
 .bg::before {
   content: "";
   position: absolute;
@@ -46,11 +40,10 @@ body {
     60px 60px,
     60px 60px;
 
-  opacity: 0.7;
+  opacity: 0.8;
   animation: circuitMove 10s ease-in-out infinite alternate;
 }
 
-/* scanline */
 .bg::after {
   content: "";
   position: absolute;
@@ -58,31 +51,22 @@ body {
   right: 0;
   height: 220px;
   top: -240px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(34,211,238,0.14),
-    rgba(59,130,246,0.18),
-    transparent
-  );
+  background: linear-gradient(to bottom, transparent, rgba(34,211,238,0.14), rgba(59,130,246,0.18), transparent);
   filter: blur(8px);
   animation: scanLine 4s linear infinite;
-  opacity: 0.65;
+  opacity: 0.6;
 }
 
 @keyframes circuitMove {
   from { transform: translateY(0px) translateX(0px); }
   to   { transform: translateY(30px) translateX(-20px); }
 }
-
 @keyframes scanLine {
   0%   { top: -240px; }
   100% { top: 120vh; }
 }
 
-/* ==============================
-   LAYOUT
-============================== */
+/* Layout */
 .wrap {
   min-height: 100vh;
   display: grid;
@@ -91,16 +75,16 @@ body {
 }
 
 .card {
-  width: min(1000px, 96vw);
+  width: min(1100px, 96vw);
   background: rgba(12, 18, 40, 0.58);
   border: 1px solid rgba(34,211,238,0.30);
-  box-shadow:
-    0px 20px 80px rgba(0,0,0,0.55),
-    0px 0px 60px rgba(34,211,238,0.18);
   border-radius: 18px;
   padding: 26px;
   position: relative;
   backdrop-filter: blur(12px);
+  box-shadow:
+    0px 20px 80px rgba(0,0,0,0.55),
+    0px 0px 60px rgba(34,211,238,0.18);
   animation: fadeUp 0.9s ease forwards;
 }
 
@@ -116,12 +100,10 @@ body {
   top: 14px;
   height: 60px;
   border-radius: 14px;
-  background: linear-gradient(90deg, rgba(34,211,238,0.18), rgba(59,130,246,0.08));
+  background: linear-gradient(90deg, rgba(34,211,238,0.20), rgba(59,130,246,0.10));
 }
 
-/* ==============================
-   HEADER
-============================== */
+/* Header */
 .titleRow {
   display: flex;
   gap: 14px;
@@ -137,36 +119,31 @@ body {
 h1 {
   font-size: 30px;
   font-weight: 900;
-  letter-spacing: 0.2px;
 }
 
-.name {
-  color: #67e8f9;
-}
+.name { color: #67e8f9; }
 
 .smallSub {
   margin-top: 6px;
   opacity: 0.85;
   font-size: 14px;
-  color: rgba(234,242,255,0.85);
+  color: rgba(234,242,255,0.90);
 }
 
-/* ==============================
-   STATUS PILLS
-============================== */
+/* Status */
 .statusRow {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin: 14px 0 18px;
+  margin: 14px 0 14px;
 }
 
 .statusPill {
   padding: 10px 12px;
   border-radius: 999px;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 12px;
-  border: 1px solid rgba(120, 180, 255, 0.18);
+  border: 1px solid rgba(120, 180, 255, 0.22);
   background: rgba(10, 18, 36, 0.55);
   display: inline-flex;
   align-items: center;
@@ -182,28 +159,49 @@ h1 {
   animation: pulse 1.2s infinite alternate;
 }
 
-.online { border-color: rgba(34,197,94,0.25); }
-.build  { border-color: rgba(59,130,246,0.25); }
-.kernel { border-color: rgba(34,211,238,0.22); }
-
-.good { color: #22c55e; }
-.info { color: #67e8f9; }
-
 @keyframes pulse {
   from { transform: scale(1); opacity: 0.7; }
   to   { transform: scale(1.2); opacity: 1; }
 }
 
-/* ==============================
-   GRID PANELS
-============================== */
+.good { color: #22c55e; }
+.info { color: #67e8f9; }
+
+/* Top buttons */
+.topActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.btnTop {
+  text-decoration: none;
+  font-weight: 900;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(34,211,238,0.20);
+  border: 1px solid rgba(34,211,238,0.28);
+  color: #eaf2ff;
+  transition: 0.25s ease;
+}
+
+.btnTop:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btnTop.outline {
+  background: transparent;
+}
+
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 14px;
 }
 
-/* Default panel */
 .panel {
   grid-column: span 6;
   background: rgba(15, 25, 55, 0.55);
@@ -215,7 +213,7 @@ h1 {
 
 .panel:hover {
   transform: translateY(-3px);
-  box-shadow: 0px 16px 50px rgba(34,211,238,0.12);
+  box-shadow: 0px 16px 50px rgba(34,211,238,0.14);
 }
 
 .panel h2 {
@@ -224,19 +222,23 @@ h1 {
   color: #cfe8ff;
 }
 
+.para {
+  opacity: 0.95;
+  line-height: 1.6;
+  font-size: 14px;
+  color: rgba(234,242,255,0.92);
+}
+
 .panel ul {
   margin-left: 20px;
   line-height: 1.7;
-  color: rgba(234, 242, 255, 0.92);
 }
 
-.boot {
+.wide {
   grid-column: span 12;
 }
 
-/* ==============================
-   TERMINAL
-============================== */
+/* Terminal */
 .terminal {
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(34, 211, 238, 0.25);
@@ -244,7 +246,6 @@ h1 {
   padding: 14px;
   height: 190px;
   overflow: auto;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   box-shadow: inset 0px 0px 30px rgba(34,211,238,0.07);
 }
 
@@ -267,7 +268,7 @@ h1 {
   border: none;
   border-radius: 12px;
   padding: 10px 14px;
-  font-weight: 800;
+  font-weight: 900;
   background: rgba(34,211,238,0.22);
   color: #eaf2ff;
   transition: 0.25s ease;
@@ -280,56 +281,7 @@ h1 {
   border: 1px solid rgba(34,211,238,0.35);
 }
 
-/* ==============================
-   SKILL METERS
-============================== */
-.meter {
-  margin-top: 12px;
-}
-
-.meterTop {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 800;
-  font-size: 13px;
-  opacity: 0.95;
-}
-
-.pct {
-  color: rgba(34,211,238,0.95);
-}
-
-.bar {
-  height: 10px;
-  margin-top: 8px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.06);
-  overflow: hidden;
-  border: 1px solid rgba(120, 180, 255, 0.14);
-}
-
-.fill {
-  height: 100%;
-  border-radius: 999px;
-  width: 0%;
-  background: linear-gradient(90deg, rgba(34,211,238,0.8), rgba(59,130,246,0.85));
-  animation: load 1.4s ease forwards;
-}
-
-@keyframes load {
-  from { width: 0%; }
-  to { width: var(--w); }
-}
-
-/* widths */
-.f90 { --w: 90%; }
-.f88 { --w: 88%; }
-.f82 { --w: 82%; }
-.f78 { --w: 78%; }
-
-/* ==============================
-   PIPELINE
-============================== */
+/* Pipeline */
 .pipeline {
   display: flex;
   align-items: center;
@@ -347,32 +299,14 @@ h1 {
   background: rgba(0,0,0,0.25);
 }
 
-.step.done {
-  border-color: rgba(34,197,94,0.25);
-  color: #86efac;
-}
-
+.step.done { color: #86efac; border-color: rgba(34,197,94,0.25); }
 .step.active {
-  border-color: rgba(34,211,238,0.35);
   color: #67e8f9;
+  border-color: rgba(34,211,238,0.35);
   box-shadow: 0 0 18px rgba(34,211,238,0.15);
-  animation: activeGlow 1.4s infinite alternate;
 }
 
-@keyframes activeGlow {
-  from { transform: scale(1); }
-  to { transform: scale(1.03); }
-}
-
-.line {
-  width: 18px;
-  height: 2px;
-  background: rgba(34,211,238,0.25);
-}
-
-/* ==============================
-   TECH PILLS
-============================== */
+/* Pills */
 .tech {
   display: flex;
   flex-wrap: wrap;
@@ -380,24 +314,16 @@ h1 {
 }
 
 .pill {
-  background: rgba(34,211,238,0.10);
+  background: rgba(34,211,238,0.12);
   border: 1px solid rgba(34,211,238,0.30);
   padding: 8px 12px;
   border-radius: 999px;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 900;
   color: rgba(234,242,255,0.92);
-  transition: 0.25s ease;
 }
 
-.pill:hover {
-  transform: scale(1.05);
-  background: rgba(34,211,238,0.16);
-}
-
-/* ==============================
-   METRICS CARDS
-============================== */
+/* Metrics */
 .metrics {
   display: flex;
   gap: 12px;
@@ -415,7 +341,7 @@ h1 {
 }
 
 .metricLabel {
-  font-weight: 800;
+  font-weight: 900;
   opacity: 0.8;
   font-size: 12px;
 }
@@ -429,9 +355,7 @@ h1 {
 .metricValue.green { color: #22c55e; }
 .metricValue.blue  { color: #60a5fa; }
 
-/* ==============================
-   CONNECT
-============================== */
+/* Connect */
 .connect {
   margin-top: 18px;
   border-radius: 14px;
@@ -460,33 +384,16 @@ h1 {
   padding: 10px 14px;
   border-radius: 12px;
   transition: 0.25s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid rgba(120,180,255,0.12);
 }
 
-.linkedin {
-  background: rgba(10, 102, 194, 0.85);
-  color: white;
-}
-.email {
-  background: rgba(239, 68, 68, 0.85);
-  color: white;
-}
-.github {
-  background: rgba(17, 24, 39, 0.92);
-  color: white;
-}
+.linkedin { background: rgba(10,102,194,0.85); color: white; }
+.email { background: rgba(239,68,68,0.85); color: white; }
+.github { background: rgba(17,24,39,0.92); color: white; }
 
-.btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.08);
-}
+.btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
 
-/* ==============================
-   RESPONSIVE
-============================== */
+/* Responsive */
 @media (max-width: 900px) {
   .panel { grid-column: span 12; }
   h1 { font-size: 26px; }
