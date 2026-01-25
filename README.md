@@ -20,11 +20,17 @@
 
 ---
 
-## 🧰 Skills
-- **Languages:** C, C++, Python, Bash  
-- **Embedded:** Yocto, Embedded Linux, RTOS, BSP, Drivers  
-- **DevOps:** GitHub Actions, CI/CD, Docker  
-- **Tools:** Git, CMake, Debugging, Automation Testing  
+TECHNICAL SKILLS
+- Languages: C++ (14/17/20), C, Python, Rust, Bash, JavaScript/TypeScript, SQL, ROS2
+- DevOps & Infrastructure: Docker, CI/CD (GitHub Actions, Jenkins), Git, Build Automation, Enterprise Architecture, SysML, UML
+- Embedded Linux: Yocto/BitBake, Linux Kernel, U-Boot, BSP Development, Device Tree, Petalinux, Jetson
+- Linux Driver Development: Character Drivers, Platform Drivers, SPI/I2C/UART Drivers, Kernel Modules, Performance Monitoring Tools, Firmware Update, Package management
+- Backend & APIs: REST APIs, gRPC, HTTP/HTTPS, MQTT, SQL databases, Protocol Buffers, CODESYS
+- Embedded Platforms: ARM Cortex-M/A, STM32, Xilinx Zynq MP/FPGA, AMD SoC, ESP32/ESP8266
+- RTOS & Frameworks: FreeRTOS, QNX, Zephyr, SafeRTOS, VxWorks, Qt/QML
+- IoT and Protocols: OPC UA, EtherCAT, MODBUS, SPI, I2C, UART, LoRaWAN, RS485, Ethernet
+- Tools & Testing: GTest/GMock, Pytest, Vitis/Vivado, Enterprise Architect (UML), GDB, Valgrind, MATLAB
+- Leadership: Team mentoring, Code review, Agile/SAFe methodologies, Technical documentation, Cross-functional collaboration, Software Design, Individual contributor
 
 ---
 
