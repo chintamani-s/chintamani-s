@@ -23,7 +23,7 @@
 ## 🧰 Skills
 - **Languages:** C, C++, Python, Bash  
 - **Embedded:** Yocto, Embedded Linux, RTOS, BSP, Drivers  
-- **DevOps:** Jenkins, GitHub Actions, CI/CD, Docker  
+- **DevOps:** GitHub Actions, CI/CD, Docker  
 - **Tools:** Git, CMake, Debugging, Automation Testing  
 
 ---
@@ -32,6 +32,8 @@
 - **Schneider Electric** (2025 — Present)  
 - **Philips Healthcare** (2023 — 2025)  
 - **Utthunga Technologies** (2021 — 2023)
+- **Vighnaharta Technologies** (2020 — 2021)
+- **Polaris India Pvt.Ltd.** (2018 — 2020)
 
 ---
 
