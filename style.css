@@ -499,3 +499,40 @@ h1 {
   .panel { grid-column: 1 / -1; }
   h1 { font-size: 26px; }
 }
+
+/* ==============================
+   PROJECT CARDS (FIXES UGLY WRAPPING)
+============================== */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.projectCard {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(120, 90, 10, 0.16);
+}
+
+.projectCard h3 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #1f2937;
+}
+
+.projectCard p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(17, 24, 39, 0.80);
+}
+
+@media (max-width: 900px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
