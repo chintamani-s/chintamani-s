@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chintamani Sagade | Embedded Linux Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Embedded/Electronics Animated Background -->
+  <div class="bg"></div>
+
+  <main class="wrap">
+
+    <section class="card">
+      <!-- Top glow bar -->
+      <div class="headerGlow"></div>
+
+      <!-- Header -->
+      <div class="titleRow">
+        <span class="rocket">⚡</span>
+        <div>
+          <h1>Chintamani <span class="name">Sagade</span></h1>
+          <p class="smallSub">Embedded Linux | Yocto | C++ | CI/CD | Industrial Automation</p>
+        </div>
+      </div>
+
+      <!-- System Status -->
+      <div class="statusRow">
+        <div class="statusPill online">
+          <span class="statusDot"></span>
+          SYSTEM: ONLINE
+        </div>
+
+        <div class="statusPill build">
+          BUILD: <span class="good">PASS</span>
+        </div>
+
+        <div class="statusPill kernel">
+          KERNEL: <span class="info">5.x+</span>
+        </div>
+      </div>
+
+      <!-- Main Grid -->
+      <div class="grid">
+
+        <!-- About -->
+        <div class="panel">
+          <h2>✅ About</h2>
+          <ul>
+            <li>Senior Software / Embedded Engineer (7+ yrs)</li>
+            <li>Embedded Linux, Yocto build systems, BSP integration</li>
+            <li>CI/CD pipelines, automation, Docker-based builds</li>
+            <li>Industrial automation + robotics system development</li>
+          </ul>
+        </div>
+
+        <!-- Skills Meters -->
+        <div class="panel">
+          <h2>📊 Skills (Live Meter)</h2>
+
+          <div class="meter">
+            <div class="meterTop">
+              <span>Embedded Linux / Yocto</span>
+              <span class="pct">90%</span>
+            </div>
+            <div class="bar"><div class="fill f90"></div></div>
+          </div>
+
+          <div class="meter">
+            <div class="meterTop">
+              <span>C / C++</span>
+              <span class="pct">88%</span>
+            </div>
+            <div class="bar"><div class="fill f88"></div></div>
+          </div>
+
+          <div class="meter">
+            <div class="meterTop">
+              <span>CI/CD + Automation</span>
+              <span class="pct">82%</span>
+            </div>
+            <div class="bar"><div class="fill f82"></div></div>
+          </div>
+
+          <div class="meter">
+            <div class="meterTop">
+              <span>Docker + DevOps</span>
+              <span class="pct">78%</span>
+            </div>
+            <div class="bar"><div class="fill f78"></div></div>
+          </div>
+        </div>
+
+        <!-- Boot Logs -->
+        <div class="panel boot">
+          <h2>🧠 Embedded Linux Boot Logs</h2>
+
+          <div class="terminal" id="terminal">
+            <pre id="logText"></pre>
+          </div>
+
+          <div class="terminalButtons">
+            <button class="btnSm" onclick="restartBoot()">Restart Boot</button>
+            <button class="btnSm outline" onclick="togglePause()">Pause/Resume</button>
+          </div>
+        </div>
+
+        <!-- Pipeline -->
+        <div class="panel">
+          <h2>⚙️ CI/CD Pipeline</h2>
+
+          <div class="pipeline">
+            <div class="step done">Checkout</div>
+            <div class="line"></div>
+            <div class="step done">Build</div>
+            <div class="line"></div>
+            <div class="step done">Unit Tests</div>
+            <div class="line"></div>
+            <div class="step active">Deploy</div>
+          </div>
+
+          <p class="hint">
+            Automated pipelines with reproducible builds, testing, and reporting.
+          </p>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="panel">
+          <h2>🧰 Tech Stack</h2>
+          <div class="tech">
+            <span class="pill">Yocto</span>
+            <span class="pill">C++</span>
+            <span class="pill">Linux</span>
+            <span class="pill">Bash</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Git</span>
+            <span class="pill">CI/CD</span>
+            <span class="pill">CMake</span>
+            <span class="pill">Jenkins</span>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="panel">
+          <h2>📍 Experience Highlights</h2>
+          <ul>
+            <li><b>Schneider Electric</b> (2025 — Present)</li>
+            <li><b>Philips Healthcare</b> (2023 — 2025)</li>
+            <li><b>Utthunga Technologies</b> (2021 — 2023)</li>
+          </ul>
+
+          <div class="metrics">
+            <div class="metricCard">
+              <p class="metricLabel">Build Time</p>
+              <p class="metricValue green">-40%</p>
+            </div>
+            <div class="metricCard">
+              <p class="metricLabel">Test Coverage</p>
+              <p class="metricValue blue">75%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connect -->
+      <div class="connect">
+        <p class="connectTitle">LET'S CONNECT</p>
+        <div class="btnRow">
+          <a class="btn linkedin" href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a class="btn email" href="mailto:yourmail@gmail.com">Email</a>
+          <a class="btn github" href="https://github.com/" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // ---- Boot log simulation ----
+    const logs = [
+      "[ 0.000000] Booting Linux on physical CPU 0x0",
+      "[ 0.012345] Linux version 5.x (gcc ...) #1 SMP PREEMPT",
+      "[ 0.120000] CPU: ARMv8 / x86_64 (sim) bringup complete",
+      "[ 0.340000] Initramfs unpacking completed",
+      "[ 0.510000] Mounting root filesystem (ext4) ... OK",
+      "[ 0.720000] systemd[1]: Started udev Kernel Device Manager",
+      "[ 1.040000] systemd[1]: Reached target Multi-User System",
+      "[ 1.220000] Yocto build: reproducible environment loaded",
+      "[ 1.470000] CI/CD agent: pipeline connected",
+      "[ 1.750000] Network: eth0 up, DHCP lease acquired",
+      "[ 2.000000] Embedded services started successfully ✅"
+    ];
+
+    let idx = 0;
+    let paused = false;
+    let timer = null;
+
+    function writeNext() {
+      if (paused) return;
+      if (idx >= logs.length) return;
+      const logText = document.getElementById("logText");
+      logText.textContent += logs[idx] + "\n";
+      idx++;
+      document.getElementById("terminal").scrollTop = 999999;
+      timer = setTimeout(writeNext, 420);
+    }
+
+    function restartBoot() {
+      clearTimeout(timer);
+      idx = 0;
+      document.getElementById("logText").textContent = "";
+      paused = false;
+      writeNext();
+    }
+
+    function togglePause() {
+      paused = !paused;
+      if (!paused) writeNext();
+    }
+
+    // auto start boot logs
+    writeNext();
+  </script>
+</body>
+</html>
