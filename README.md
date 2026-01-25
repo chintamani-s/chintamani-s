@@ -20,7 +20,7 @@
 
 ---
 
-TECHNICAL SKILLS
+##  TECHNICAL SKILLS
 - Languages: C++ (14/17/20), C, Python, Rust, Bash, JavaScript/TypeScript, SQL, ROS2
 - DevOps & Infrastructure: Docker, CI/CD (GitHub Actions, Jenkins), Git, Build Automation, Enterprise Architecture, SysML, UML
 - Embedded Linux: Yocto/BitBake, Linux Kernel, U-Boot, BSP Development, Device Tree, Petalinux, Jetson
