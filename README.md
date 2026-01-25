@@ -1,4 +1,4 @@
-<h1 align="center">⚡ Chintamani Sagade</h1>
+<h1 align="center">Chintamani Sagade</h1>
 <p align="center"><b>Embedded Linux | Yocto | C/C++ | CI/CD | Industrial Automation</b></p>
 
 <p align="center">
